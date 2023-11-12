@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin Panel</title>
+</head>
+
+<body>
+
+    <div class="admin-panel">
+        <h1>Add Product</h1>
+        <form id="addProductForm">
+            <label for="productName">Ady:</label>
+            <input type="text" id="productName" required>
+
+            <label for="productPrice">Bahasy:</label>
+            <input type="number" id="productPrice" required>
+
+            <!-- Добавляем четыре поля для описаний -->
+            <label for="productDescription1">Modeli:</label>
+            <textarea id="productDescription1" rows="2" required></textarea>
+
+            <label for="productDescription2">Yyly:</label>
+            <textarea id="productDescription2" rows="2" required></textarea>
+
+            <label for="productDescription3">Motor:</label>
+            <textarea id="productDescription3" rows="2" required></textarea>
+
+            <label for="productDescription4">Koropka P:</label>
+            <textarea id="productDescription4" rows="2" required></textarea>
+
+            <!-- Добавляем input для выбора неограниченного количества изображений (multiple) -->
+            <label for="productImages">Product Images:</label>
+            <input type="file" id="productImages" accept="image/*" multiple onchange="previewImages()" required>
+            <div id="imagesPreview" class="images-preview"></div>
+
+            <button type="submit">Taze goş</button>
+        </form>
+
+        <div id="productList" class="product-list">
+            <!-- Список добавленных товаров будет отображаться здесь -->
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
